@@ -18,9 +18,10 @@ const session = await auth();
 
             <div className='flex items-center gap-5'>
                 {session && session?.user ? (
+                    // If the user is authenticated, show these links
                     <>
                     <Link href="/startup/create">
-                        <span className='text-black hover:text-gray-300'>
+                        <span className='text-black hover:text-gray-500'>
                             Create
                         </span>
                     </Link>
@@ -29,22 +30,23 @@ const session = await auth();
                         "use server";
                         await signOut({ redirectTo: '/' });
                     }}>
-                        <button type="submit" className="text-black hover:text-gray-300">
+                        <button type='submit' className="text-black hover:text-gray-500 cursor-pointer">
                             Logout
                         </button>
                     </form>
 
-                    <Link href={`/user/${session?.id}`}>
-                        <span className='text-black hover:text-gray-300'>
+                    <Link href={`/user/${session?.user?.id}`}>
+                        <span className='text-black hover:text-gray-500'>
                             {session?.user?.name}
                         </span>
                     </Link>
                     </>
                 ) : (
+                    // If the user is not authenticated, show this link
                     <form action={async () => {
                         "use server";
                        await signIn('github')}} >
-                        <button type='submit' className='text-black'>
+                        <button type='submit' className='text-black hover:text-gray-500 cursor-pointer'>
                             Login
                         </button>
                     </form>
