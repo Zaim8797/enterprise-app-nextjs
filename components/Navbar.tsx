@@ -3,17 +3,16 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { auth, signIn, signOut } from '@/auth'
-import { redirect } from 'next/dist/server/api-utils'
 
 const Navbar = async () => {
 
 const session = await auth();
 
   return (
-    <div className='px-5 py-3 bg-white shadow-md rounded-lg'>
+    <div className='px-5 py-3 my-5 mx-1 bg-gray-200 shadow-md rounded-lg border-4 border-black'>
         <nav className='flex items-center justify-between'>
             <Link href="/" className='text-white hover:text-gray-300'>
-                <Image src={"/z-logo.png"} alt="Logo" width={50} height={50} className='inline-block mr-2' />
+                <Image src={"/z-green-png.png"} alt="Logo" width={50} height={50} className='inline-block mr-2' />
             </Link>
 
             <div className='flex items-center gap-5'>
