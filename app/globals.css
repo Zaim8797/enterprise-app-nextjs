@@ -136,4 +136,211 @@
   .search-form {
     @apply flex items-center justify-center gap-2 bg-white shadow-md rounded-lg p-2 my-5 border-4 border-black;
   }
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.text-30-extrabold {
+  @apply text-3xl font-extrabold text-white;
+}
+
+.text-30-bold {
+  @apply text-3xl font-bold text-black;
+}
+
+.text-30-semibold {
+  @apply font-semibold text-3xl text-black;
+}
+
+.text-26-semibold {
+  @apply font-semibold text-2xl text-black;
+}
+
+.text-24-black {
+  @apply text-2xl font-black text-black;
+}
+
+.text-20-medium {
+  @apply font-medium text-base text-black;
+}
+
+.text-16-medium {
+  @apply font-medium text-sm text-black;
+}
+
+.text-14-normal {
+  @apply font-normal text-sm text-white/80;
+}
+
+.pink_container {
+  @apply w-full bg-pink-500 min-h-[530px] flex justify-center items-center flex-col py-10 px-6;
+}
+
+.tag {
+  @apply bg-yellow-500 px-6 py-3 font-sans font-bold rounded-sm uppercase relative;
+}
+
+.heading {
+  @apply uppercase bg-black px-6 py-3 font-sans font-extrabold text-white sm:text-5xl sm:leading-[64px] text-3xl leading-[46px] max-w-5xl text-center my-5;
+}
+
+.sub-heading {
+  @apply font-medium text-base text-white max-w-2xl text-center break-words;
+}
+
+.section_container {
+  @apply px-6 py-10 max-w-7xl mx-auto;
+}
+
+.card_grid {
+  @apply grid md:grid-cols-3 sm:grid-cols-2 gap-5 hover:transform hover:scale-101 transition-all duration-300;
+}
+
+.card_grid-sm {
+  @apply grid sm:grid-cols-2 gap-5;
+}
+
+.no-result {
+  @apply text-gray-400 text-sm font-normal;
+}
+
+.profile_container {
+  @apply w-full pb-10 pt-20 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row gap-10;
+}
+
+.profile_card {
+  @apply w-80 px-6 pb-6 pt-20 flex flex-col justify-center items-center bg-pink-500 border-4 border-black shadow-md rounded-2xl relative z-0 h-fit max-lg:w-full;
+}
+
+.profile_title {
+  @apply w-11/12 bg-white border-4 border-black rounded-xl px-5 py-3 absolute -top-9 shadow-md;
+}
+
+.profile_image {
+  @apply rounded-full object-cover border-2 border-black;
+}
+
+.divider {
+  @apply border-dotted bg-zinc-400 max-w-4xl my-10 mx-auto;
+}
+
+.view_skeleton {
+  @apply bg-zinc-400 h-10 w-24 rounded-lg fixed bottom-3 right-3;
+}
+
+.avatar {
+  @apply p-0 focus-visible:ring-0 bg-none rounded-full shadow-md;
+}
+
+.dropdown-menu {
+  @apply w-56 border-4 border-black bg-white p-5 rounded-2xl;
+}
+
+.login {
+  @apply border-4 py-4 border-black bg-white text-black shadow-md font-sans font-medium transition-all duration-500;
+}
+
+.search-form {
+  @apply max-w-3xl w-full min-h-[80px] bg-white border-4 border-black rounded-full text-lg mt-8 px-5 flex flex-row items-center gap-5;
+}
+
+.search-input {
+  @apply flex-1 font-bold placeholder:font-semibold placeholder:text-gray-400 w-full outline-none;
+}
+
+.search-btn {
+  @apply w-12 h-12 rounded-full bg-black flex justify-center items-center;
+}
+
+.startup-card {
+  @apply bg-white border-4 border-black py-6 px-5 rounded-xl shadow-md transition-all duration-500;
+}
+
+.startup-card_date {
+  @apply font-medium text-sm bg-yellow-100 px-4 py-2 rounded-full;
+}
+
+.startup-card_desc {
+  @apply font-normal text-sm line-clamp-2 my-3 text-gray-600 break-all;
+}
+
+.startup-card_img {
+  @apply w-full h-40 rounded-lg object-cover;
+}
+
+.startup-card_btn {
+  @apply rounded-full bg-gray-800 font-medium text-sm text-white px-5 py-3;
+}
+
+.startup-card_skeleton {
+  @apply w-full h-96 rounded-xl bg-zinc-400;
+}
+
+.startup-form {
+  @apply max-w-2xl mx-auto bg-white my-10 space-y-8 px-6;
+}
+
+.startup-form_label {
+  @apply font-bold text-base text-black uppercase;
+}
+
+.startup-form_input {
+  @apply border-2 border-black px-5 py-7 text-base text-black font-semibold rounded-full mt-3 placeholder:text-gray-400;
+}
+
+.startup-form_textarea {
+  @apply border-2 border-black p-5 text-base text-black font-semibold rounded-xl mt-3 placeholder:text-gray-400;
+}
+
+.startup-form_error {
+  @apply text-red-500 mt-2 ml-5;
+}
+
+.startup-form_editor {
+  @apply mt-3 border-2 border-black text-base text-black font-semibold placeholder:text-gray-400;
+}
+
+.startup-form_btn {
+  @apply bg-pink-500 border-4 border-black rounded-full p-5 min-h-[70px] w-full font-bold text-base;
+}
+
+.view-container {
+  @apply flex justify-end items-center mt-5 fixed bottom-3 right-3;
+}
+
+.view-text {
+  @apply font-medium text-sm bg-yellow-100 px-4 py-2 rounded-lg capitalize;
+}
+
+.category-tag {
+  @apply font-medium text-sm bg-yellow-100 px-4 py-2 rounded-full;
+}
+
+.pattern {
+  background-image: linear-gradient(to right, transparent 49.5%, rgba(251, 232, 67, 0.2) 49.5%, rgba(251, 232, 67, 0.6) 50.5%, transparent 50.5%);
+  background-size: 5% 100%;
+  background-position: center;
+  background-repeat: repeat-x;
+}
+
+.tag-tri {
+  @apply relative;
+}
+.tag-tri::before {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  border-top: 0.625rem solid black;
+  border-right: 0.625rem solid transparent;
+}
+.tag-tri::after {
+  content: '';
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  border-bottom: 0.625rem solid black;
+  border-left: 0.625rem solid transparent;
+}
 }
