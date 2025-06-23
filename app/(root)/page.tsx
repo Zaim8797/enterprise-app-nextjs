@@ -5,14 +5,16 @@ import { STARTUP_QUERY } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
 
 import { StartupTypeCard } from "@/components/StartupCard";
+import { sanityFetch, SanityLive } from "@/sanity/lib/live";
 
 export default async function Page( {searchParams}: { 
   searchParams: Promise<{ query?: string }>
 }) {
 
   const query = (await searchParams).query;
- 
   const posts = await client.fetch(STARTUP_QUERY);
+  const params = { search: query || null };
+  const { data: posts } = await sanityFetch({ query: STARTUP_QUERY, params });
   
     return (
     <>
@@ -40,6 +42,7 @@ export default async function Page( {searchParams}: {
         </ul>
       </section>
 
+      <SanityLive />
     </>
   );
 }
