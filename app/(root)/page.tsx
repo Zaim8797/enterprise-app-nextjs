@@ -12,6 +12,7 @@ export default async function Page( {searchParams}: {
 }) {
 
   const query = (await searchParams).query;
+  const posts = await client.fetch(STARTUP_QUERY);
   const params = { search: query || null };
   const { data: posts } = await sanityFetch({ query: STARTUP_QUERY, params });
   
